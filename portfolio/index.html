@@ -16,8 +16,18 @@
             overflow-x: hidden; /* Remove horizontal overflow */
             overflow-y: auto; /* Allow vertical scrolling if needed */
         }
-      
-    
+ .card-cover {
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-size: contain; /* Scale the background image to cover the entire container */
+    opacity: 1; /* Adjust the transparency of the card */
+}
+
+.card-cover .text-white {
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background color to improve text readability */
+}
+ 
+ 
+ 
 </style>
 
 <body>
@@ -105,23 +115,25 @@
                 <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg bg-contain"
                     style="background-image: url('drum.png');">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h3>
+                        <div class="container py-10">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Keyboard Drum</h3>
+                        </div>
+                        
                         <ul class="d-flex list-unstyled mt-auto">
-                            <li class="me-auto">
+                            <!-- <li class="me-auto">
                                 <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
                                     class="rounded-circle border border-white">
-                            </li>
+                            </li> -->
                             <li class="d-flex align-items-center me-3">
                                 <svg class="bi me-2" width="1em" height="1em">
                                     <use xlink:href="#geo-fill"></use>
                                 </svg>
-                                <small>Earth</small>
+                                <small class="fw-bold align-items-center text-orange-400 " > <a href="https://harshraj1695.github.io/Drum_kit/" target="_blank">Website</a></small>
                             </li>
                             <li class="d-flex align-items-center">
                                 <svg class="bi me-2" width="1em" height="1em">
                                     <use xlink:href="#calendar3"></use>
                                 </svg>
-                                <small>3d</small>
                             </li>
                         </ul>
                     </div>
